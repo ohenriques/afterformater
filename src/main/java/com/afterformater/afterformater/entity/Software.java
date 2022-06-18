@@ -9,16 +9,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "country")
+@Table(name = "software")
 @Entity
 @Data
-public class County {
+public class Software {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Long id;
 
-    @Column
-    private String name;
+    @Column( name = "nome")
+    private String nome;
+
+    @Column (name = "url")
+    private String url;
+
+    @Column (name = "img")
+    private String img;
 }

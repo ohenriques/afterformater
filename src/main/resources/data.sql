@@ -1,5 +1,7 @@
-create table country(id int ,name varchar(20));
+CREATE TABLE IF NOT EXISTS software(id int, nome varchar(20), url varchar(20), img varchar(20));
 
-insert into country(name) values('India');
-insert into country(name) values('India');
-insert into country(name) values('India');
+INSERT INTO software(nome,url,img) VALUES ('Vsc','http://google.com','c://img.jpg');
+INSERT INTO software(nome,url,img) VALUES ('Postman','http://google.com','c://img.jpg');
+INSERT INTO software(nome,url,img) VALUES ('Git','http://google.com','c://img.jpg');
+INSERT INTO software(nome,url,img) VALUES ('Edge','http://google.com','c://img.jpg');
+
