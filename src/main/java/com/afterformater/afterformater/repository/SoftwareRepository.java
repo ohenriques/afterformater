@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SoftwareRepository extends JpaRepository<Software, Long> {
-
     Software findByNome(String nome);
 }

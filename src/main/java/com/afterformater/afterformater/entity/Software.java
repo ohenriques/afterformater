@@ -2,12 +2,7 @@ package com.afterformater.afterformater.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "software")
 @Entity
@@ -19,12 +14,16 @@ public class Software {
     @Column
     private Long id;
 
-    @Column( name = "nome")
+    @Column(name = "nome")
     private String nome;
 
-    @Column (name = "url")
+    @Column(name = "url")
     private String url;
 
-    @Column (name = "img")
+    @Column(name = "img")
     private String img;
+
+    @Column(name = "version")
+    private String version;
+
 }

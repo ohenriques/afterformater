@@ -21,8 +21,14 @@ public class SoftwareServiceImp {
     public Software save(Software dto) {
         return repository.save(dto);
     }
+
+    //    TODO: Refatorar e colocar um tratamento melhor
     public Optional<Software> findById(long id) {
-        return repository.findById(id);
+        Optional<Software> entity = repository.findById(id);
+        if (!entity.isPresent()) {
+            return null;
+        }
+        return entity;
     }
 
     public Software findByNome(String nome) {
