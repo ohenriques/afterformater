@@ -2,6 +2,8 @@ package com.afterformater.afterformater.controller;
 
 import com.afterformater.afterformater.entity.Software;
 import com.afterformater.afterformater.repository.imp.SoftwareServiceImp;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,8 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class SoftwareController {
 
+    private static final Logger logger = LoggerFactory.getLogger(SoftwareController.class);
+
     SoftwareServiceImp service;
 
     SoftwareController(SoftwareServiceImp repository) {
@@ -21,6 +25,7 @@ public class SoftwareController {
 
     @GetMapping()
     public ResponseEntity<Software> getSoftware() {
+        logger.info("get all software");
         return new ResponseEntity(service.findAll(), HttpStatus.OK);
     }
 
